@@ -1,5 +1,5 @@
 html {
-    border: 2px solid red;
+    height: 100vh;
     font-size: 2rem;
     background: linear-gradient(white, rgb(245, 163, 69));
 }
@@ -7,7 +7,6 @@ html {
 header {
     margin-bottom: 30px;
     text-align: center;
-    border: 2px solid red;
 }
 
 select {
@@ -18,16 +17,28 @@ select {
     display: flex;
     flex-direction: row;
     justify-content: space-evenly;
-    border: 2px solid red;
     padding: 0 10vw;
 }
 
 .column {
     flex: 1;
-    border: 3px solid green
 }
 
 img {
-    max-width: 900px;
-    max-height: 700px;
+    width: 500px;
+}
+
+span {
+    font-weight: bold;
+    font-size: 1.3rem;
+    text-decoration: underline;
+}
+
+#dog-name {
+    font-size: 2rem;
+    text-decoration: none;
+}
+
+.left-col {
+    text-align: center;
 }
