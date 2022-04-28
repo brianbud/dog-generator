@@ -13,7 +13,12 @@ fetch(BREEDS_URL)
             const option = document.createElement('option') // creates <option></option>
             option.value = breedsArray[i] //<option value = 'breed'>
             option.innerText = breedsArray[i]
-            select.appendChild(option)
+            select.appendChild(option) //adds current <option> to select
         }
 
     })
+
+select.addEventListener('change', event => {
+    console.log(event.target.value)
+    let url = `https://dog.ceo/api/${event.target.value}/image/random`
+})
