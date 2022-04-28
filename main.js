@@ -3,8 +3,8 @@ const BREEDS_URL = 'https://dog.ceo/api/breeds/list/all'
 const select = document.querySelector('.breeds')
 
 fetch(BREEDS_URL)
-    .then(res => {
-        return res.json();
+    .then(response => {
+        return response.json();
     })
     .then(data => {
         const breedsObject = data.message; //Turn message into object
@@ -13,6 +13,7 @@ fetch(BREEDS_URL)
             const option = document.createElement('option') // creates <option></option>
             option.value = breedsArray[i] //<option value = 'breed'>
             option.innerText = breedsArray[i]
+            select.appendChild(option)
         }
 
     })

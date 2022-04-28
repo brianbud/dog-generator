@@ -39,6 +39,11 @@ span {
     text-decoration: none;
 }
 
-.left-col {
+.left-col,
+.column {
     text-align: center;
+}
+
+.column * {
+    list-style-type: none;
 }
