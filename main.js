@@ -54,8 +54,10 @@ const dogInfo = {
         x = (Math.random() < 0.5);
         if (x) {
             this.gender = 'Female';
+            this.assignName(this.fNames)
         } else {
             this.gender = 'Male'
+            this.assignName(this.mNames)
         }
 
     }
