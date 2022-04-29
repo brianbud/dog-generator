@@ -25,7 +25,8 @@ select {
 }
 
 img {
-    width: 500px;
+    max-width: 900px;
+    max-height: 700px;
 }
 
 span {
