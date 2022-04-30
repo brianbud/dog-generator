@@ -21,6 +21,7 @@ fetch(BREEDS_URL)
 select.addEventListener('change', event => {
     let url = `https://dog.ceo/api/breed/${event.target.value}/images/random`
     getDogImg(url)
+    dogInfo.assignGender()
 })
 
 const img = document.querySelector('.dog-img')
@@ -59,6 +60,13 @@ const dogInfo = {
             this.gender = 'Male'
             this.assignName(this.mNames)
         }
+        document.getElementById('gender').innerHTML = `S: ${this.gender}`
 
+    },
+
+    assignName(array) {
+        this.rname = array[Math.floor(Math.random() * array.length)]
+        document.getElementById('dog-name').innerHTML = `${this.rname}`
     }
+
 }
