@@ -22,6 +22,7 @@ select.addEventListener('change', event => {
     let url = `https://dog.ceo/api/breed/${event.target.value}/images/random`
     getDogImg(url)
     dogInfo.assignGender()
+    dogInfo.assignAge()
 })
 
 const img = document.querySelector('.dog-img')
@@ -67,6 +68,11 @@ const dogInfo = {
     assignName(array) {
         this.rname = array[Math.floor(Math.random() * array.length)]
         document.getElementById('dog-name').innerHTML = `${this.rname}`
+    },
+
+    assignAge() {
+        this.age = Math.floor(Math.random() * 15 + 1)
+        document.getElementById('age').innerHTML = `Age: ${this.age}`
     }
 
 }
