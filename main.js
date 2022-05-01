@@ -23,6 +23,7 @@ select.addEventListener('change', event => {
     getDogImg(url)
     dogInfo.assignGender()
     dogInfo.assignAge()
+    dogInfo.assignLikes()
 })
 
 const img = document.querySelector('.dog-img')
@@ -92,6 +93,11 @@ const dogInfo = {
         }
 
         return array;
+    },
+
+    assignLikes() {
+        this.likes = this.fisherYatesShuffle(this.likesList).slice(0, 2)
+        document.getElementById('likes').innerHTML = `Likes: ${this.likes[0]}, ${this.likes[1]}`
     }
 
 }
